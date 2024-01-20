@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>BlogWebsite</title>
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}
+    <div
+      class="container"
+      style="
+        background: beige;
+        border-radius: 15px;
+        box-shadow: 1px 1px 4px;
+        padding-top: 41px;
+        padding-bottom: 41px;
+      "
+    >
+      <span class="fs-1 fw-semibold" style="margin-right: 9px"
+        >{{post.title}}</span
+      ><span>@{{post.author}}</span
+      ><span style="padding-left: 14px; padding-right: 14px"
+        >{{post.date}}</span
+      >
+      <hr />
+      <pre class="fs-5" style="margin-top: 34px; white-space: pre-wrap">
+{{post.body}}</pre
+      >
+    </div>
+  </body>
+</html>

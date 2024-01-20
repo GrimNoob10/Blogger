@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>BlogWebsite</title>
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container" style="padding-left: 84px; padding-right: 84px">
+      <form method="POST" action="edit-post">
+        {% csrf_token %}
+        <h1 style="padding-top: 0px; padding-bottom: 0px; margin-bottom: 41px">
+          Edit your post.
+        </h1>
+        <label class="form-label">Post title</label
+        ><input
+          class="form-control"
+          type="text"
+          name="title"
+          value="{{post.title}}"
+        /><label class="form-label">Write your post content here.</label
+        ><textarea
+          class="form-control"
+          style="margin-bottom: 16px; height: 500px"
+          name="content"
+        >
+{{post.body}}</textarea
+        ><input class="btn btn-primary" type="submit" value="Update" />
+      </form>
+    </div>
+  </body>
+</html>
